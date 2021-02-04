@@ -1,7 +1,7 @@
 ---
-title: ${ORG} Container Images
-description: ${REPO}
-version: v.0.1.0
+title: GitHub Workflow Template for Crytic Slither
+description: Slither CI Pipeline workflow
+version: v.1.0.0
 ---
 
 # Slither GitHub Actions Workflow
