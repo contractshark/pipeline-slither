@@ -1,9 +1,6 @@
 name: Slither
-"on":
+on:
   push:
-    branches:
-      - master
-  pull_request: null
 
 jobs:
   slither:
@@ -15,18 +12,18 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12
-      - name: Python 3.8
+      - name: Python 3.7
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.7
       - name: Cache pip
         uses: actions/cache@v2
-        with: null
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-          ${{ runner.os }}-
+        with: 
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
       - name: Install node dependencies
         run: yarn
       - name: Install slither
@@ -36,7 +33,7 @@ jobs:
       - name: Install solc
         run: >
           sudo wget -O /usr/bin/solc
-          https://github.com/ethereum/solidity/releases/download/v0.6.6/solc-static-linux
+          https://github.com/ethereum/solidity/releases/download/v0.5.17/solc-static-linux
           sudo chmod +x /usr/bin/solc
       - name: Run slither
         run: slither .
