@@ -1,17 +1,15 @@
 {
   "name": "actions-slither",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "GitHub Actions for Slither",
+  "main": "index.json",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/contractshark/pipeline-slither.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [ "slither", "ethereum", "smart contracts", "ci" ],
+  "author": "SEE CONTRIBUTORS",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/contractshark/pipeline-slither/issues"
